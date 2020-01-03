@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="SharpKml.Core" Version="5.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FamilyTreeLibrary\FamilyTreeLibrary.csproj" />
+    <ProjectReference Include="..\FamilyTreeTools\FamilyTreeTools.csproj" />
+  </ItemGroup>
+
+</Project>
