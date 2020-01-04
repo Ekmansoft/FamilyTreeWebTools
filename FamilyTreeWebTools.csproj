@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.0</TargetFramework>
@@ -9,6 +9,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\FamilyTreeCodecGedcom\FamilyTreeCodecGedcom.csproj" />
+    <ProjectReference Include="..\FamilyTreeCodecGeni\FamilyTreeCodecGeni.csproj" />
+    <ProjectReference Include="..\FamilyTreeCodecText\FamilyTreeCodecText.csproj" />
     <ProjectReference Include="..\FamilyTreeLibrary\FamilyTreeLibrary.csproj" />
     <ProjectReference Include="..\FamilyTreeTools\FamilyTreeTools.csproj" />
   </ItemGroup>
