@@ -168,6 +168,13 @@ namespace FamilyTreeWebTools.Data
     public string AppSecret { get; set; }
   }
 
+  public class EmailSendSource
+  {
+    public string Address { get; set; }
+    public string CredentialAddress { get; set; }
+    public string CredentialPassword { get; set; }
+  }
+
 
   public class AppSetting
   {

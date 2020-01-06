@@ -12,7 +12,7 @@ namespace FamilyTreeWebTools.Services
   {
     private static TraceSource trace = new TraceSource("EmailClass", SourceLevels.Warning);
 
-    public static void SendMail(string sender, string receiver, string subject, string message)
+    public static void SendMail(string sender, string credentialAddress, string credentialPassword, string receiver, string subject, string message)
     {
       trace.TraceEvent(TraceEventType.Information, 0, " sending mail from:" + sender + " to:" + receiver + " msg-len:" + message.Length);
       MailMessage mailObj = new MailMessage();
@@ -27,7 +27,7 @@ namespace FamilyTreeWebTools.Services
       SmtpClient client = new SmtpClient("smtp.gmail.com");
       client.UseDefaultCredentials = false;
       client.EnableSsl = true;
-      client.Credentials = new NetworkCredential("bkekman@gmail.com", "cvidwfizhpnxqogd");
+      client.Credentials = new NetworkCredential(credentialAddress, credentialPassword);
       try
       {
         client.Send(mailObj);
@@ -36,6 +36,7 @@ namespace FamilyTreeWebTools.Services
       catch (Exception ex)
       {
         trace.TraceData(TraceEventType.Error, 0, ex.ToString());
+        trace.TraceEvent(TraceEventType.Warning, 0, " email-credentials:" + credentialAddress + ":" + credentialPassword);
       }
       trace.TraceEvent(TraceEventType.Information, 0, " send mail done");
     }
