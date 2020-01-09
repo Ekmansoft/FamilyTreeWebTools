@@ -4,11 +4,12 @@ using FamilyTreeCodecGeni;
 
 namespace FamilyTreeWebTools.Services
 {
+  public delegate void AuthenticationUpdateCallback(string userId, string accessToken, string refreshToken, int expiresIn);
 
   public class WebAuthentication
   {    
     static readonly TraceSource trace = new TraceSource("WebAuthentication", SourceLevels.Information);
-    public WebAuthentication(string userId, string tClientId, string tClientSecret)
+    public WebAuthentication(string userId, string tClientId, string tClientSecret, AuthenticationUpdateCallback callback)
     {
       this.geniAuthentication = new GeniAppAuthenticationClass(AuthenticationUpdate, tClientId, tClientSecret);
       this.userId = userId;
