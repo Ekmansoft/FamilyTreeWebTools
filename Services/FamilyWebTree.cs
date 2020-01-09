@@ -170,7 +170,7 @@ namespace FamilyTreeWebTools.Services
     {
       trace.TraceData(TraceEventType.Information, 0, "GetWebTree");
 
-      FamilyTreeStoreGeni2 webTree = new FamilyTreeStoreGeni2(CompletedCallback, authenticationClass.geniAuthentication);
+      FamilyTreeStoreGeni2 webTree = new FamilyTreeStoreGeni2(CompletedCallback, authenticationClass.getGeniAuthentication());
 
       trace.TraceData(TraceEventType.Information, 0, "FamilyWebTree::FamilyTreeStoreGeni2( )");
 
