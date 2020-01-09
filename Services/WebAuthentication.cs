@@ -9,19 +9,25 @@ namespace FamilyTreeWebTools.Services
   public delegate void AuthenticationUpdateCallback(string userId, string accessToken, string refreshToken, int expiresIn);
 
   public class WebAuthentication
-  {    
+  {
     static readonly TraceSource trace = new TraceSource("WebAuthentication", SourceLevels.Information);
-    public WebAuthentication(string userId, string tClientId, string tClientSecret, AuthenticationUpdateCallback callback)
-    {
-      trace.TraceData(TraceEventType.Information, 0, "WebAuthentication " + userId + " " + tClientId);
-      this.geniAuthentication = new GeniAppAuthenticationClass(AuthenticationUpdate, tClientId, tClientSecret);
-      this.userId = userId;
-      _callback = callback;
-      //geniAuthentication.SetUserId(userId);
-    }
     private GeniAppAuthenticationClass geniAuthentication;
     private string userId;
     private AuthenticationUpdateCallback _callback;
+    public WebAuthentication(string userId, string tClientId, string tClientSecret, AuthenticationUpdateCallback callback)
+    {
+      trace.TraceData(TraceEventType.Information, 0, "WebAuthentication " + userId + " " + tClientId);
+      geniAuthentication = new GeniAppAuthenticationClass(AuthenticationUpdate, tClientId, tClientSecret);
+      this.userId = userId;
+      _callback = callback;
+
+      if (geniAuthentication == null)
+      {
+        trace.TraceData(TraceEventType.Error, 0, "WebAuthentication failed (null) ");
+      }
+
+      //geniAuthentication.SetUserId(userId);
+    }
 
     public void UpdateAuthenticationData(string accessToken, string refreshToken, int expiresIn, DateTime authenticationTime, bool saveToDb = false)
     {
@@ -50,7 +56,16 @@ namespace FamilyTreeWebTools.Services
 
     public string getAuthorizeUrl()
     {
-      return "https://www.geni.com/platform/oauth/authorize?client_id=" + geniAuthentication.GetClientId().ToString();
+      string str = "";
+      try
+      {
+        str = "https://www.geni.com/platform/oauth/authorize?client_id=" + geniAuthentication.GetClientId().ToString();
+      }
+      catch (Exception ex)
+      {
+        trace.TraceData(TraceEventType.Warning, 0, "UpdateAuthenticationData failure " + ex.ToString() + " " + userId);
+      }
+      return str;
     }
   }
 }
