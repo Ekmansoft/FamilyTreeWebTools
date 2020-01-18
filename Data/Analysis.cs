@@ -305,7 +305,6 @@ namespace FamilyTreeWebTools.Data
       MissingPartnerMitigated,
     }
 
-    [Flags]
     public enum IssueStatus
     {
       None = 0x00,
