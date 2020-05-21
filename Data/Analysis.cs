@@ -182,6 +182,8 @@ namespace FamilyTreeWebTools.Data
     public int Id { get; set; }
     [DefaultValue(3)]
     public int MaxSimultaneousJobs { get; set; }
+    //[DefaultValue(1)]
+    //public int HttpRequestType { get; set; }
   }
 
   public class Analysis
