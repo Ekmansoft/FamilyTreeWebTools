@@ -7,7 +7,7 @@
 - Helpers to format email and databases with analyses results.
 
 ### Dependencies
-- Dotnet Core 3.0
+- Dotnet Core 3.1
 - FamilyTreeLibrary https://github.com/endian02/FamilyTreeLibrary
 - FamilyTreeTools https://github.com/endian02/FamilyTreeTools
 - FamilyTreeCodecGedcom https://github.com/endian02/FamilyTreeCodecGedcom
