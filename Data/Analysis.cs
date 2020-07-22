@@ -292,7 +292,7 @@ namespace FamilyTreeWebTools.Data
       DaysBetweenChildren,
       Twins,
       InexactBirthDeath,
-      UnknownBirthDeath,
+      UnknownBirthDeath, // Deprecated, kept for db compatibility 
       ParentsMissing,
       ParentsProblem,
       MarriageProblem,
@@ -305,6 +305,9 @@ namespace FamilyTreeWebTools.Data
       ShortAddress,
       UnknownLocation,
       MissingPartnerMitigated,
+      UnknownBirth,
+      UnknownDeath,
+      UnknownDeathEmigrated,
     }
 
     public enum IssueStatus
