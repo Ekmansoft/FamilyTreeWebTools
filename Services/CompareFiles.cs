@@ -1,12 +1,11 @@
-﻿using System;
-using System.Text;
+﻿using FamilyTreeLibrary.FamilyData;
+using FamilyTreeLibrary.FamilyTreeStore;
+using FamilyTreeTools.CompareResults;
+using FamilyTreeTools.FamilyTreeSanityCheck;
+using FamilyTreeWebTools.Services;
 using System.Collections.Generic;
 using System.Diagnostics;
-using FamilyTreeLibrary.FamilyTreeStore;
-using FamilyTreeLibrary.FamilyData;
-using FamilyTreeTools.FamilyTreeSanityCheck;
-using FamilyTreeTools.CompareResults;
-using FamilyTreeWebTools.Services;
+using System.Text;
 
 namespace FamilyTreeWebTools.Compare
 {
@@ -25,7 +24,7 @@ namespace FamilyTreeWebTools.Compare
 
     Profile.SexType ConvertSex(IndividualClass.IndividualSexType sex)
     {
-      switch(sex)
+      switch (sex)
       {
         case IndividualClass.IndividualSexType.Male:
           return Profile.SexType.Male;
@@ -62,7 +61,7 @@ namespace FamilyTreeWebTools.Compare
     }
 
     public FileCompare()
-    {      
+    {
       //email = userEmail;
       //this.userId = userId;
     }
@@ -101,7 +100,7 @@ namespace FamilyTreeWebTools.Compare
         string id1 = "";
 
 
-        if(ix1 >= 0)
+        if (ix1 >= 0)
         {
           id1 = match.profile1.Url.Substring(ix1 + 1);
         }
@@ -117,7 +116,8 @@ namespace FamilyTreeWebTools.Compare
           match.CompareUrl = "https://www.geni.com/merge/compare/" + id1 + "?return=match%3B&to=" + id2;
           trace.TraceEvent(TraceEventType.Verbose, 0, "url " + match.CompareUrl);
           match.profile2.Url = match.CompareUrl;
-        } else
+        }
+        else
         {
           trace.TraceEvent(TraceEventType.Verbose, 0, "comp-url " + match.profile1.Url + " " + ix1 + " " + id1 + " " + match.profile2.Url + " " + ix2 + " " + id2);
         }
@@ -128,7 +128,8 @@ namespace FamilyTreeWebTools.Compare
 
         matches.Add(match);
         //trace.TraceData(TraceEventType.Warning, 0, builder.ToString());
-      } else
+      }
+      else
       {
         if (person1full == null)
         {
@@ -181,5 +182,5 @@ namespace FamilyTreeWebTools.Compare
       return ProgressDbClass.Instance.StopRequested(id);
     }
   }
- 
+
 }

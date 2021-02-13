@@ -74,7 +74,7 @@ namespace FamilyTreeWebTools.Data
     public bool ExportJson { get; set; }
     [DefaultValue(false)]
     [Display(Name = "Export Kml (Map)")]
-    public bool ExportKml{ get; set; }
+    public bool ExportKml { get; set; }
     [Required]
     [DefaultValue(false)]
     [Display(Name = "Check whole file")]
@@ -206,7 +206,7 @@ namespace FamilyTreeWebTools.Data
     [Display(Name = "Start person")]
     public string StartPersonName { get; set; }
     [Required]
-    public string StartPersonXref  { get; set; }
+    public string StartPersonXref { get; set; }
     [Required]
     [Display(Name = "Start time")]
     public DateTime StartTime { get; set; }

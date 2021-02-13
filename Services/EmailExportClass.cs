@@ -1,13 +1,11 @@
-﻿using System;
+﻿//using FamilyStudioData.Controllers;
+//using FamilyStudioData.FamilyData;
+using FamilyTreeTools.FamilyTreeSanityCheck;
+using FamilyTreeWebTools.Compare;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
-//using FamilyStudioData.Controllers;
-//using FamilyStudioData.FamilyData;
-using FamilyTreeLibrary.FamilyTreeStore;
-using FamilyTreeTools.FamilyTreeSanityCheck;
-using FamilyTreeWebTools.Compare;
 
 namespace FamilyTreeWebTools.Email
 {
@@ -89,8 +87,8 @@ namespace FamilyTreeWebTools.Email
       foreach (FileCompare.MatchingProfiles match in matches)
       {
 
-      // compare url  https://www.geni.com/merge/compare/6000000083384695337?return=match%3B&to=6000000075044146008
-      // https://www.geni.com/merge/compare/6000000086954097870?return=duplicates__6000000086954006034_6000000086954006034_6000000086954006034_2&to=6000000077556402263
+        // compare url  https://www.geni.com/merge/compare/6000000083384695337?return=match%3B&to=6000000075044146008
+        // https://www.geni.com/merge/compare/6000000086954097870?return=duplicates__6000000086954006034_6000000086954006034_6000000086954006034_2&to=6000000077556402263
 
         if (match.profile1 != null)
         {

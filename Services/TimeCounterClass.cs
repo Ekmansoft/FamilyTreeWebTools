@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace FamilyTreeWebTools.Services
 {
@@ -67,7 +65,7 @@ namespace FamilyTreeWebTools.Services
       }
       public override string ToString()
       {
-        return "ix:" + section + " count:" + executionCounter + " time:" + FmtTime(elapsedTime) + " (" + FmtTime(minTime) + " - " + FmtTime(maxTime) + ")"; 
+        return "ix:" + section + " count:" + executionCounter + " time:" + FmtTime(elapsedTime) + " (" + FmtTime(minTime) + " - " + FmtTime(maxTime) + ")";
       }
       public void Trace()
       {
@@ -135,7 +133,7 @@ namespace FamilyTreeWebTools.Services
     public TimeCounterClass(int MaxCount = 0, string name = null)
     {
       sectionList = new List<TimeSection>();
-      for(int i = 0; i < DefaultSections; i++)
+      for (int i = 0; i < DefaultSections; i++)
       {
         sectionList.Add(new TimeSection(i));
       }
@@ -150,10 +148,10 @@ namespace FamilyTreeWebTools.Services
 
       while (index >= sectionList.Count)
       {
-        traceSource.TraceData(TraceEventType.Warning, 0, " increase sections " + index + " > + " + sectionList.Count );
+        traceSource.TraceData(TraceEventType.Warning, 0, " increase sections " + index + " > + " + sectionList.Count);
         sectionList.Add(new TimeSection(sectionList.Count));
       }
-      if(currentSection >= 0)
+      if (currentSection >= 0)
       {
         sectionList[currentSection].Stop(time);
       }
@@ -173,13 +171,13 @@ namespace FamilyTreeWebTools.Services
       {
         sectionList[currentSection].Stop(time);
       }
-      if(currentSection < 0)
+      if (currentSection < 0)
       {
         currentSection = 0;
       }
       else
       {
-        if(currentSection < sectionList.Count - 1)
+        if (currentSection < sectionList.Count - 1)
         {
           currentSection++;
         }
@@ -217,7 +215,7 @@ namespace FamilyTreeWebTools.Services
 
       builder.AppendLine("Count = " + sectionList.Count + " (" + MaxCount + ") time = " + FmtTime(TotalTime()));
 
-      for(int i = 0; i < sectionList.Count; i++)
+      for (int i = 0; i < sectionList.Count; i++)
       {
         if (sectionList[i].TotalTime() > TimeSpan.FromSeconds(10.0))
         {
@@ -229,7 +227,7 @@ namespace FamilyTreeWebTools.Services
     public void Trace()
     {
       //Stop(DateTime.Now);
-      if(string.IsNullOrEmpty(Name))
+      if (string.IsNullOrEmpty(Name))
       {
         traceSource.TraceData(TraceEventType.Information, 0, "TimeCount:" + Name);
       }

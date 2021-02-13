@@ -1,10 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.ComponentModel;
-using FamilyTreeLibrary.FamilyTreeStore;
-using FamilyTreeCodecGedcom;
+﻿using FamilyTreeCodecGedcom;
 using FamilyTreeCodecText;
+using FamilyTreeLibrary.FamilyTreeStore;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Diagnostics;
 
 namespace FamilyTreeWebTools.Services
 {
@@ -24,7 +24,7 @@ namespace FamilyTreeWebTools.Services
       Text
     };
 
-//    private IList<FamilyFileTypeBaseClass> codecList2; 
+    //    private IList<FamilyFileTypeBaseClass> codecList2; 
 
 
 
@@ -78,7 +78,7 @@ namespace FamilyTreeWebTools.Services
       return FamilyFileType.Unknown;
     }
 
-    
+
     public bool IsKnownFileType(String fileName)
     {
       foreach (FamilyFileTypeBaseClass fileType in codecList)
@@ -162,7 +162,7 @@ namespace FamilyTreeWebTools.Services
 
     public IFamilyTreeStoreBaseClass CreateFamilyTreeStore(String fileName, CompletedCallback callback)
     {
-      if((fileName == null) || (fileName == ""))
+      if ((fileName == null) || (fileName == ""))
       {
         FamilyTreeStoreRam nativeStore = new FamilyTreeStoreRam();
 
@@ -203,7 +203,7 @@ namespace FamilyTreeWebTools.Services
       foreach (FamilyFileTypeBaseClass fileType in codecList)
       {
         trace.TraceInformation("SetProgressTarget() " + fileType.GetType());
-        if(selectedType == GetType(fileType))
+        if (selectedType == GetType(fileType))
         {
           //selectedType = GetType(fileType);
           return fileType.SetProgressTarget(inBackgroundWorker);
@@ -257,7 +257,7 @@ namespace FamilyTreeWebTools.Services
         // class compared to real encoder classes...
         GetFileTypeFilter(operation);
       }
-      if(variant < encoderMapList.Count)
+      if (variant < encoderMapList.Count)
       {
         selectedEncoder = encoderMapList[variant].encoder;
         if (storedProgressTarget != null)
@@ -268,9 +268,9 @@ namespace FamilyTreeWebTools.Services
         selectedEncoder.StoreFile(familyTree, filename, operation, encoderMapList[variant].variant);
         return;
       }
-      foreach(FamilyFileEncoder encoder in encoderList)
+      foreach (FamilyFileEncoder encoder in encoderList)
       {
-        if(encoder.IsKnownFileType(filename))
+        if (encoder.IsKnownFileType(filename))
         {
           selectedEncoder = encoder;
           if (storedProgressTarget != null)
@@ -293,12 +293,12 @@ namespace FamilyTreeWebTools.Services
       {
         storedProgressTarget = progressTarget;
       }
-        
+
     }
 
     private void AppendFilterStrings(ref string str)
     {
-      if ((str.Length > 0) && (str[str.Length-1] != '|'))
+      if ((str.Length > 0) && (str[str.Length - 1] != '|'))
       {
         str += "|";
       }
@@ -311,10 +311,10 @@ namespace FamilyTreeWebTools.Services
       {
         if (encoder.GetFileTypeFilter(operation) != null)
         {
-          IDictionary<int,string> opList = encoder.GetOperationVariantList(operation);
+          IDictionary<int, string> opList = encoder.GetOperationVariantList(operation);
           if ((opList != null) && (opList.Count > 0))
           {
-            foreach(KeyValuePair<int,string> op in opList)
+            foreach (KeyValuePair<int, string> op in opList)
             {
               EncoderMap entry = new EncoderMap();
 
@@ -349,7 +349,7 @@ namespace FamilyTreeWebTools.Services
     {
       foreach (FamilyFileEncoder encoder in encoderList)
       {
-        if(encoder.IsKnownFileType(filename))
+        if (encoder.IsKnownFileType(filename))
         {
           return true;
         }

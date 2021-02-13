@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using FamilyTreeLibrary.FamilyData;
+using FamilyTreeLibrary.FamilyTreeStore;
 using SharpKml.Base;
 using SharpKml.Dom;
-using FamilyTreeLibrary.FamilyData;
-using FamilyTreeLibrary.FamilyTreeStore;
+using System;
+using System.Collections.Generic;
 using System.Diagnostics;
-using System.Xml;
 
 namespace FamilyTreeWebTools.Services
 {
