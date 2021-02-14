@@ -8,10 +8,10 @@
 
 ### Dependencies
 - Dotnet Core 3.1
-- FamilyTreeLibrary https://github.com/endian02/FamilyTreeLibrary
-- FamilyTreeTools https://github.com/endian02/FamilyTreeTools
-- FamilyTreeCodecGedcom https://github.com/endian02/FamilyTreeCodecGedcom
-- FamilyTreeCodecGeni https://github.com/endian02/FamilyTreeCodecGeni
+- FamilyTreeLibrary https://github.com/Ekmansoft/FamilyTreeLibrary
+- FamilyTreeTools https://github.com/Ekmansoft/FamilyTreeTools
+- FamilyTreeCodecGedcom https://github.com/Ekmansoft/FamilyTreeCodecGedcom
+- FamilyTreeCodecGeni https://github.com/Ekmansoft/FamilyTreeCodecGeni
 
 ### License 
 - Apache 2.0
