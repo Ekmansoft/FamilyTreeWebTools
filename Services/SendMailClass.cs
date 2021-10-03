@@ -24,6 +24,8 @@ namespace FamilyTreeWebTools.Services
       SmtpClient client = new SmtpClient("smtp.gmail.com");
       client.UseDefaultCredentials = false;
       client.EnableSsl = true;
+      client.Port = 587;
+      client.DeliveryMethod = SmtpDeliveryMethod.Network;
       client.Credentials = new NetworkCredential(credentialAddress, credentialPassword);
       try
       {
