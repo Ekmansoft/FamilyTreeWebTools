@@ -308,6 +308,8 @@ namespace FamilyTreeWebTools.Data
       UnknownBirth,
       UnknownDeath,
       UnknownDeathEmigrated,
+      MissingMother,
+      MissingFather,
     }
 
     public enum IssueStatus
