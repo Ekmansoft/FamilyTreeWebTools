@@ -17,6 +17,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="EkmanSoft.FamilyTree.Library" Version="1.2.0" />
+    <PackageReference Include="EkmanSoft.FamilyTree.Codec.Geni" Version="1.2.0" />
+    <PackageReference Include="EkmanSoft.FamilyTree.Codec.Gedcom" Version="1.2.0" />
+    <PackageReference Include="EkmanSoft.FamilyTree.Codec.Text" Version="1.2.0" />
+    <PackageReference Include="EkmanSoft.FamilyTree.Tools" Version="1.2.0" />
     <PackageReference Include="SharpKml.Core" Version="5.1.0" />
     <ProjectReference Include="..\FamilyTreeCodecGedcom\FamilyTreeCodecGedcom.csproj" />
     <ProjectReference Include="..\FamilyTreeCodecGeni\FamilyTreeCodecGeni.csproj" />
