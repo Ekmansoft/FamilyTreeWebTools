@@ -4,7 +4,7 @@ using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Text.Json;
 
-namespace FamilyTreeWebTools.Data
+namespace Ekmansoft.FamilyTree.WebTools.Data
 {
 
   public class IssueCounter

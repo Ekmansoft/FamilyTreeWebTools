@@ -1,12 +1,12 @@
-﻿using FamilyTreeCodecGedcom;
-using FamilyTreeCodecText;
-using FamilyTreeLibrary.FamilyTreeStore;
+﻿using Ekmansoft.FamilyTree.Codec.Gedcom;
+using Ekmansoft.FamilyTree.Codec.Text;
+using Ekmansoft.FamilyTree.Library.FamilyTreeStore;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
 
-namespace FamilyTreeWebTools.Services
+namespace Ekmansoft.FamilyTree.WebTools.Services
 {
   public class FamilyFileTypeCollection : IFamilyFileType
   {

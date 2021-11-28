@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Text;
 
-namespace FamilyTreeWebTools.Services
+namespace Ekmansoft.FamilyTree.WebTools.Services
 {
   public class TimeCounterClass
   {

@@ -3,7 +3,7 @@ using System.Diagnostics;
 using System.Net;
 using System.Net.Mail;
 
-namespace FamilyTreeWebTools.Services
+namespace Ekmansoft.FamilyTree.WebTools.Services
 {
   public class SendMailClass
   {
@@ -21,10 +21,10 @@ namespace FamilyTreeWebTools.Services
       mailObj.BodyEncoding = System.Text.Encoding.UTF8;
       mailObj.SubjectEncoding = System.Text.Encoding.UTF8;
       //SmtpClient SMTPServer = new SmtpClient("127.0.0.1");
-      SmtpClient client = new SmtpClient("smtp.gmail.com");
+      SmtpClient client = new SmtpClient("smtp.gmail.com", 587);
       client.UseDefaultCredentials = false;
       client.EnableSsl = true;
-      client.Port = 587;
+      //client.Port = 587;
       client.DeliveryMethod = SmtpDeliveryMethod.Network;
       client.Credentials = new NetworkCredential(credentialAddress, credentialPassword);
       try

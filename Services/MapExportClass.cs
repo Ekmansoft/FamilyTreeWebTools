@@ -1,12 +1,12 @@
-﻿using FamilyTreeLibrary.FamilyData;
-using FamilyTreeLibrary.FamilyTreeStore;
+﻿using Ekmansoft.FamilyTree.Library.FamilyData;
+using Ekmansoft.FamilyTree.Library.FamilyTreeStore;
 using SharpKml.Base;
 using SharpKml.Dom;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 
-namespace FamilyTreeWebTools.Services
+namespace Ekmansoft.FamilyTree.WebTools.Services
 {
   public class MapExportClass
   {

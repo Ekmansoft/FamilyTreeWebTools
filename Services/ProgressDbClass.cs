@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Threading;
 
-namespace FamilyTreeWebTools.Services
+namespace Ekmansoft.FamilyTree.WebTools.Services
 {
   public sealed class ProgressDbClass
   {

@@ -1,10 +1,10 @@
-﻿using FamilyTreeCodecGeni;
+﻿using Ekmansoft.FamilyTree.Codec.Geni;
 using System;
 using System.Diagnostics;
 using System.Web;
-//using FamilyTreeWebTools.Services;
+//using Ekmansoft.FamilyTree.WebTools.Services;
 
-namespace FamilyTreeWebTools.Services
+namespace Ekmansoft.FamilyTree.WebTools.Services
 {
   public delegate void AuthenticationUpdateCallback(string userId, string accessToken, string refreshToken, int expiresIn);
 

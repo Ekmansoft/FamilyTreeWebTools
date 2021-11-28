@@ -1,4 +1,4 @@
-### FamilyTreeWebTools
+### Ekmansoft.FamilyTree.WebTools
 - Dotnet Core C# library for working with genealogy family trees on web sites.
 
 ### Description
@@ -8,10 +8,10 @@
 
 ### Dependencies
 - Dotnet Core 6.0
-- FamilyTreeLibrary https://github.com/Ekmansoft/FamilyTreeLibrary
-- FamilyTreeTools https://github.com/Ekmansoft/FamilyTreeTools
-- FamilyTreeCodecGedcom https://github.com/Ekmansoft/FamilyTreeCodecGedcom
-- FamilyTreeCodecGeni https://github.com/Ekmansoft/FamilyTreeCodecGeni
+- Ekmansoft.FamilyTree.Library https://github.com/Ekmansoft/FamilyTreeLibrary
+- Ekmansoft.FamilyTree.Tools https://github.com/Ekmansoft/FamilyTreeTools
+- Ekmansoft.FamilyTree.Codec.Gedcom https://github.com/Ekmansoft/FamilyTreeCodecGedcom
+- Ekmansoft.FamilyTree.Codec.Geni https://github.com/Ekmansoft/FamilyTreeCodecGeni
 
 ### License 
 - Apache 2.0

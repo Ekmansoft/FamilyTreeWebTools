@@ -1,13 +1,13 @@
-﻿using FamilyTreeLibrary.FamilyData;
-using FamilyTreeLibrary.FamilyTreeStore;
-using FamilyTreeTools.CompareResults;
-using FamilyTreeTools.FamilyTreeSanityCheck;
-using FamilyTreeWebTools.Services;
+﻿using Ekmansoft.FamilyTree.Library.FamilyData;
+using Ekmansoft.FamilyTree.Library.FamilyTreeStore;
+using Ekmansoft.FamilyTree.Tools.CompareResults;
+using Ekmansoft.FamilyTree.Tools.FamilyTreeSanityCheck;
+using Ekmansoft.FamilyTree.WebTools.Services;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Text;
 
-namespace FamilyTreeWebTools.Compare
+namespace Ekmansoft.FamilyTree.WebTools.Compare
 {
   public class FileCompare
   {

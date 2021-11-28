@@ -1,13 +1,13 @@
 ﻿//using FamilyStudioData.Controllers;
 //using FamilyStudioData.FamilyData;
-using FamilyTreeTools.FamilyTreeSanityCheck;
-using FamilyTreeWebTools.Compare;
+using Ekmansoft.FamilyTree.Tools.FamilyTreeSanityCheck;
+using Ekmansoft.FamilyTree.WebTools.Compare;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace FamilyTreeWebTools.Email
+namespace Ekmansoft.FamilyTree.WebTools.Email
 {
   public class EmailExportClass
   {
