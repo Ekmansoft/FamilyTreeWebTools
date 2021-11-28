@@ -234,7 +234,7 @@ namespace Ekmansoft.FamilyTree.WebTools.Data
     }
   }
 
-  public class FamilyTree
+  public class FamilyTreeStorage
   {
     public enum TreeType
     {
