@@ -20,8 +20,8 @@ namespace Ekmansoft.FamilyTree.WebTools.Email
     static public string ExportHtml(JobInfo jobInfo, AnalysisSettings settings)
     {
       StringBuilder builder = new StringBuilder();
+      string webPageUrl = "https://improveyourtree.com/FamilyTree/AnalysisResultView/Index";
 
-      string webPageUrl = ""https://improveyourtree.com/FamilyTree/AnalysisResultView/Index"
       //ancestorList.OrderBy<int, depth>();
       builder.Append("<!DOCTYPE html>" + GetLinefeed() +
         "<html lang=\"en\"><head><meta charset=\"UTF-8\"/>" + GetLinefeed() +
