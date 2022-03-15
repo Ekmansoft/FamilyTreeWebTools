@@ -20,6 +20,8 @@ namespace Ekmansoft.FamilyTree.WebTools.Email
     static public string ExportHtml(JobInfo jobInfo, AnalysisSettings settings)
     {
       StringBuilder builder = new StringBuilder();
+
+      string webPageUrl = ""https://improveyourtree.com/FamilyTree/AnalysisResultView/Index"
       //ancestorList.OrderBy<int, depth>();
       builder.Append("<!DOCTYPE html>" + GetLinefeed() +
         "<html lang=\"en\"><head><meta charset=\"UTF-8\"/>" + GetLinefeed() +
@@ -27,11 +29,14 @@ namespace Ekmansoft.FamilyTree.WebTools.Email
         "<body>" + GetLinefeed());
 
       builder.Append("Analysis started at " + jobInfo.StartTime.ToString("yyyy-MM-dd HH:mm") + " done after " + (jobInfo.EndTime - jobInfo.StartTime).ToString() + "<br/>" + GetLinefeed());
-      builder.Append("Ancestor overview:" + GetLinefeed());
-      builder.Append("  settings " + settings.StartPersonName + " duplicateCheck:" + settings.DuplicateCheck + " <br/>" + GetLinefeed());
-      builder.Append("           " + settings.GenerationsBack + " / " + settings.GenerationsForward + " / " +settings.EndYear + "<br/>" + GetLinefeed());
-      builder.Append("  analysed " + jobInfo.Profiles + " profiles and " + jobInfo.Families + " families " + "<br/>" + GetLinefeed());
-      builder.Append("  found    " + jobInfo.IssueList.Count + " issues.<br/>" + GetLinefeed());
+      builder.Append("Ancestor overview:" + " <br/>" + GetLinefeed());
+      builder.Append("  Settings: " + " <br/>" + GetLinefeed());
+      builder.Append("   " + settings.StartPersonName + " duplicateCheck:" + settings.DuplicateCheck + " back:" + 
+        settings.GenerationsBack + " gen / forward:" + settings.GenerationsForward + " gen / end-year:" +settings.EndYear + "<br/>" + GetLinefeed());
+      builder.Append("  Analysed: " + "<br/>" + GetLinefeed());
+      builder.Append("  " + jobInfo.Profiles + " profiles and " + jobInfo.Families + " families " + "<br/>" + GetLinefeed());
+      builder.Append("  found    " + jobInfo.IssueList.Count + " inconsistencies.<br/>" + GetLinefeed());
+      builder.Append("  <a href=\"" + webPageUrl + "\">Job list page</a> <br/>" + GetLinefeed());
 
       builder.Append("<table>" + GetLinefeed() +
         "<tr><th>Name</th><th>Birth</th><th>Death</th><th>Comment</th><th>Dup links</th></tr>" + GetLinefeed());
