@@ -2,6 +2,7 @@
 //using FamilyStudioData.FamilyData;
 using Ekmansoft.FamilyTree.Tools.FamilyTreeSanityCheck;
 using Ekmansoft.FamilyTree.WebTools.Compare;
+using Ekmansoft.FamilyTree.WebTools.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,7 +17,7 @@ namespace Ekmansoft.FamilyTree.WebTools.Email
       return "\r\n";
     }
 
-    static public string ExportHtml(JobInfo jobInfo)
+    static public string ExportHtml(JobInfo jobInfo, AnalysisSettings settings)
     {
       StringBuilder builder = new StringBuilder();
       //ancestorList.OrderBy<int, depth>();
@@ -27,8 +28,10 @@ namespace Ekmansoft.FamilyTree.WebTools.Email
 
       builder.Append("Analysis started at " + jobInfo.StartTime.ToString("yyyy-MM-dd HH:mm") + " done after " + (jobInfo.EndTime - jobInfo.StartTime).ToString() + "<br/>" + GetLinefeed());
       builder.Append("Ancestor overview:" + GetLinefeed());
-      builder.Append("  analysed " + jobInfo.Profiles + " people and " + jobInfo.Families + " families " + "<br/>" + GetLinefeed());
-      builder.Append("  found " + jobInfo.IssueList.Count + " issues.<br/>" + GetLinefeed());
+      builder.Append("  settings " + settings.StartPersonName + " duplicateCheck:" + settings.DuplicateCheck + " <br/>" + GetLinefeed());
+      builder.Append("           " + settings.GenerationsBack + " / " + settings.GenerationsForward + " / " +settings.EndYear + "<br/>" + GetLinefeed());
+      builder.Append("  analysed " + jobInfo.Profiles + " profiles and " + jobInfo.Families + " families " + "<br/>" + GetLinefeed());
+      builder.Append("  found    " + jobInfo.IssueList.Count + " issues.<br/>" + GetLinefeed());
 
       builder.Append("<table>" + GetLinefeed() +
         "<tr><th>Name</th><th>Birth</th><th>Death</th><th>Comment</th><th>Dup links</th></tr>" + GetLinefeed());

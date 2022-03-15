@@ -107,17 +107,11 @@ namespace Ekmansoft.FamilyTree.WebTools.Services
       return familyTree;
     }
 
-    public static string ExportGedcom(IFamilyTreeStoreBaseClass familyTree)
+    public static void ExportGedcom(IFamilyTreeStoreBaseClass familyTree, string filename)
     {
       GedcomEncoder encoder = new GedcomEncoder();
-      string eFilename = Path.GetTempFileName();
-      string exportFilename = eFilename + "_export.ged";
 
-      encoder.StoreFile(familyTree, exportFilename, FamilyFileTypeOperation.Export);
-
-      File.Delete(eFilename);
-
-      return exportFilename;
+      encoder.StoreFile(familyTree, filename, FamilyFileTypeOperation.Export);
     }
 
 
