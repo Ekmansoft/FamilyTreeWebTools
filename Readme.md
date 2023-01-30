@@ -7,11 +7,12 @@
 - Helpers to format email and databases with analysis results.
 
 ### Dependencies
-- Dotnet Core 6.0
+- Dotnet 7.0
 - Ekmansoft.FamilyTree.Library https://github.com/Ekmansoft/FamilyTreeLibrary
 - Ekmansoft.FamilyTree.Tools https://github.com/Ekmansoft/FamilyTreeTools
 - Ekmansoft.FamilyTree.Codec.Gedcom https://github.com/Ekmansoft/FamilyTreeCodecGedcom
 - Ekmansoft.FamilyTree.Codec.Geni https://github.com/Ekmansoft/FamilyTreeCodecGeni
+- Ekmansoft.FamilyTree.Codec.Text https://github.com/Ekmansoft/FamilyTreeCodecText
 
 ### License 
 - Apache 2.0
